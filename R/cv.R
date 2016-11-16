@@ -4,13 +4,12 @@
 #' 
 #' @param x data frame containing value data for the chosen timeseries
 #' @return cv coefficient of variation for the given data frame
-#' @export
 #' @examples
 #' qfiletempf<-sampleData
 #' cv(qfiletempf$discharge)
 cv <- function(x) {
   x1 <- mean(x,na.rm=TRUE)
-  x2 <- sd(x, na.rm=TRUE)
+  x2 <- sd(x)
   cv <- x2/x1
   return(cv)
 }

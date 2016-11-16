@@ -4,20 +4,20 @@
 \alias{bfi}
 \title{Function to return the base flow index for a given data frame}
 \usage{
-bfi(qfiletempf)
+bfi(x)
 }
 \arguments{
-\item{qfiletempf}{data frame containing a "discharge" column containing daily flow values}
+\item{x}{A numeric vector of consecutive daily mean discharge values}
 }
 \value{
 bfi numeric value of the base flow index for the given data frame
 }
 \description{
-This function accepts a data frame that contains a column named "discharge" and 
+This function accepts a vector of daily mean discharge values and 
 calculates the base flow index of the daily flow values for the entire record
 }
 \examples{
-qfiletempf<-sampleData
-bfi(qfiletempf)
+x<-sampleData$discharge
+bfi(x)
 }
 
